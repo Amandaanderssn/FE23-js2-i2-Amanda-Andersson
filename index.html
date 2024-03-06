@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./index.js" type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Anton&family=Dela+Gothic+One&family=IBM+Plex+Mono:wght@100&family=Lora:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300&family=Playfair+Display&family=Playpen+Sans:wght@300;800&family=Roboto+Slab:wght@100&family=Young+Serif&display=swap"
+        rel="stylesheet">
+
+    <title>Scrum Board</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+
+<body>
+    <section class="headerSection">
+        <h1> ➪ ➫ SCRUM BOARD</h1>
+        <form class="addNewTaskForm">
+            <p>Write task that needs to be done and not forgotten!!!</p>
+            <input type="text" name="todoText" placeholder="To do..." id="toDoText">
+            <select>
+                <option value="ux" class="uxChoice">UX</option>
+                <option value="dev frontend" class="frontendChoice">Dev Frontend</option>
+                <option value="dev backend" class="backendChoice">Dev Backend</option>
+            </select>
+            <button class="addNewTaskButton">Add</button>
+        </form>
+        <div class="OptionBoxes">
+            <div class="frontendColor">Frontend dev</div>
+            <div class="uxColor">UX</div>
+            <div class="backendColor">Backend dev</div>
+        </div>
+    </section>
+    <section class="mainSection">
+        <div class="scrumBoardLayout">
+            <h3>To Do:</h3>
+            <h3>In Progress:</h3>
+            <h3>Done:</h3>
+        </div>
+        <div class="scrumBoardLayout">
+            <div id="scrumBoardBox-ToDo">
+            </div>
+            <div id="scrumBoardBox-inProgress">
+            </div>
+            <div id="scrumBoardBox-done">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
