@@ -5,8 +5,6 @@ export function displayAllTasks(tasks) {
     const inProgressBox = document.querySelector('#scrumBoardBox-inProgress');
     const doneBox = document.querySelector('#scrumBoardBox-done');
 
-    // const taskSection = document.querySelector('.mainSection')
-
     taskBox.innerHTML = 'To do:';
     inProgressBox.innerHTML = 'In progress: ';
     doneBox.innerHTML = 'Done: '
@@ -19,11 +17,8 @@ export function displayAllTasks(tasks) {
 }
 
 function displayToDoTasks(task, id) {
-    // console.log(id)
-    // console.log(task)
 
     if (task.status === 'to do') {
-        // createFormToTask();
 
         const toDoTaskBoxDiv = document.querySelector('#scrumBoardBox-ToDo');
         const eachTaskCard = createAndAppend(toDoTaskBoxDiv, 'div');
@@ -33,17 +28,11 @@ function displayToDoTasks(task, id) {
         const assignToPerson = createAndAppend(assignToForm, 'input')
         const assignToButton = createAndAppend(assignToForm, 'button', "Assign to: ")
 
-        // taskContent.id = id;
         eachTaskCard.id = id
-        // console.log(eachTaskCard.id)
-
-
         eachTaskCard.classList.add('eachTaskCard')
 
         assignToForm.classList.add('assignToForm')
         assignToForm.setAttribute('id', 'assignToForm')
-
-        // assignToPerson.name = "assigned";
 
         assignToButton.classList.add('assignToButton');
 
